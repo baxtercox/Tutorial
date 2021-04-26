@@ -1,25 +1,46 @@
 import React from "react";
 import ReactDom from "react-dom";
+import "./index.css";
 
 //component capital case letter
 //stateless functional component
 //always return JSX
 
-function Greeting() {
+// CSS
+
+function BookList() {
   return (
-    <div>
-      <h4>hello world</h4>
-      <ul>
-        <li>
-          <a href="#">Hello world</a>
-        </li>
-      </ul>
-    </div>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 }
 
-// const Greeting = () =>{
-//   return React.createElement('h1', {}, 'hello world');
-// };
+const Book = () => {
+  return (
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
 
-ReactDom.render(<Greeting />, document.getElementById("root"));
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/51XhQYvFvqL._AC_SX184_.jpg"
+    alt=""
+  />
+);
+
+const Title = () => <h1>I dont knoe the title</h1>;
+
+const Author = () => {
+  return <h3>Random author</h3>;
+};
+
+ReactDom.render(<BookList />, document.getElementById("root"));
