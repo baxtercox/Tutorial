@@ -12,7 +12,11 @@ body {
 }
 
 h1 {
-  color: aquamarine;
+  color: red;
+}
+
+.Book {
+  background-color: blue;
 }
 
 .booklist {
@@ -36,5 +40,16 @@ h1 {
 }
 
 .book h1 {
+  margin-top: 0.5rem;
+}
+.sodaList {
+  width: 90wv;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.book {
   margin-top: 0.5rem;
 }
